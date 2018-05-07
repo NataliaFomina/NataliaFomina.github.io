@@ -58,7 +58,6 @@ html {
 	display: flex;
 	align-items: center;
 	background-color: #5e42b0;
-	color: #fff;
 	text-transform: uppercase;
 	border: none;
 	border-radius: 5rem;
@@ -89,6 +88,7 @@ html {
 
 .button-download-text,
 .button-google-text {
+	color: #fff;
 	text-align: left;
 	font-weight: 400;
 	margin-left: 7%;
@@ -103,6 +103,7 @@ html {
 }
 
 .button-bold-text {
+	color: #fff;
 	font-weight: 700;
 }
 
