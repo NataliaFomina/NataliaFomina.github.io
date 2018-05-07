@@ -22,11 +22,11 @@ html {
 	align-items: center;
 }
 
-/*
-.header {
+.header,
+.download {
+	background-size: cover;
 	background-color: #0f0735;
 }
-*/
 
 .h1 {
 	display: flex;
@@ -272,34 +272,21 @@ html {
 @media screen and (min-width: 769px)  {
 	.header {
 		background: url(../images/surface_desktop.jpg) no-repeat center top;
-/*		background-size: cover;*/
 	}
 	
 	.download {
 		background: url(../images/download_desktop.jpg) no-repeat center top;
-/*		background-size: cover;*/
 	}
 	
-	.header,
-	.download {
-		background-size: cover;
-		background-color: #0f0735;
-	}
 }
 
 @media screen and (max-width: 768px)  {
 	.header {
-/*
-		background: url(/images/surface_768.jpg) no-repeat center top;
-		background-size: cover;
-*/
+		background: url(../images/surface_768.jpg) no-repeat center top;
 	}
 	
 	.download {
-/*
-		background: url(/images/download_768.jpg) no-repeat center top;
-		background-size: cover;
-*/
+		background: url(../images/download_768.jpg) no-repeat center top;
 	}
 }
 
