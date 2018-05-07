@@ -103,7 +103,6 @@ html {
 }
 
 .button-bold-text {
-	color: #fff;
 	font-weight: 700;
 }
 
@@ -274,12 +273,15 @@ html {
 	.header {
 		background: url(images/surface_desktop.jpg) no-repeat center top;
 		background-size: cover;
-		background-color: #0f0735;
 	}
 	
 	.download {
 		background: url(images/download_desktop.jpg) no-repeat center top;
 		background-size: cover;
+	}
+	
+	.header,
+	.download {
 		background-color: #0f0735;
 	}
 }
