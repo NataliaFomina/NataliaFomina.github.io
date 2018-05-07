@@ -114,12 +114,12 @@ html {
 	display: flex;
 	flex-direction: column;
 	margin: auto;
+	overflow: hidden;
+	-webkit-overflow: hidden;
 }
 
 .athlets-pic {
 	position: absolute;
-	overflow: hidden;
-/*	overflow-y: hidden;*/
 }
 
 .h2 {
@@ -170,7 +170,8 @@ html {
 
 .players {
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
+	-webkit-overflow: hidden;
 }
 
 .players-pic {
