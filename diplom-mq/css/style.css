@@ -318,7 +318,7 @@ html {
 	
 	.container-buttons {
 		flex-direction: row;
-		margin-bottom: 111px;
+		padding-bottom: 111px;
 	}
 	
 	.button-download, 
@@ -601,7 +601,7 @@ html {
 	
 	.container-buttons {
 		flex-direction: row;
-		margin-bottom: 92px;
+		padding-bottom: 92px;
 	}
 	
 	.button-download, 
@@ -880,7 +880,7 @@ html {
 	
 	.container-buttons {
 		flex-direction: column;
-		margin-bottom: 85px;
+		padding-bottom: 85px;
 	}
 	
 	.button-download, 
