@@ -311,7 +311,8 @@ html {
 	
 	.h1 {
 		letter-spacing: 0.49rem;
-		margin: 270px 3% 201px 3%;
+/*		margin: 270px 3% 201px 3%;*/
+		margin: 30vh 3% 21vh 3%;
 		max-width: 1550px;
 		line-height: 1.15;
 	}
@@ -913,11 +914,20 @@ html {
 	
 	.button-download-text,
 	.button-google-text {
-		letter-spacing: 0.19rem;
+		font-size: 2.6rem;
+		letter-spacing: 0.08rem;
+		margin-left: 2.4%;
+	}
+	
+	.button-download-text {
+		max-width: 100px;
+	}
+	.button-google-text {
+		max-width: 70px;
 	}
 	
 	.button-bold-text {
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.05rem;
 	}
 	
 	/* -- athlets -- */
@@ -1165,7 +1175,7 @@ html {
 	}
 	
 	.download .container-buttons {
-		margin-bottom: 56px;
+		padding-bottom: 56px;
 	}
 
 }
