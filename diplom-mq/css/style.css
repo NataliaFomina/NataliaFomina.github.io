@@ -271,21 +271,20 @@ html {
 
 @media screen and (min-width: 769px)  {
 	.header {
-		background-image: url(../images/surface_desktop.jpg) no-repeat center top;
-		background-size: cover;
+		background: url(../images/surface_desktop.jpg) no-repeat center top;
+/*		background-size: cover;*/
 	}
 	
 	.download {
-		background-image: url(../images/download_desktop.jpg) no-repeat center top;
-		background-size: cover;
+		background: url(../images/download_desktop.jpg) no-repeat center top;
+/*		background-size: cover;*/
 	}
 	
-/*
 	.header,
 	.download {
+		background-size: cover;
 		background-color: #0f0735;
 	}
-*/
 }
 
 @media screen and (max-width: 768px)  {
