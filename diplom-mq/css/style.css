@@ -22,9 +22,11 @@ html {
 	align-items: center;
 }
 
+/*
 .header {
 	background-color: #0f0735;
 }
+*/
 
 .h1 {
 	display: flex;
@@ -268,11 +270,13 @@ html {
 	.header {
 		background: url(images/surface_desktop.jpg) no-repeat center top;
 		background-size: cover;
+		background-color: #0f0735;
 	}
 	
 	.download {
 		background: url(images/download_desktop.jpg) no-repeat center top;
 		background-size: cover;
+		background-color: #0f0735;
 	}
 }
 
