@@ -118,7 +118,8 @@ html {
 
 .athlets-pic {
 	position: absolute;
-	overflow-x: hidden;
+	overflow: hidden;
+/*	overflow-y: hidden;*/
 }
 
 .h2 {
