@@ -280,10 +280,12 @@ html {
 		background-size: cover;
 	}
 	
+/*
 	.header,
 	.download {
 		background-color: #0f0735;
 	}
+*/
 }
 
 @media screen and (max-width: 768px)  {
