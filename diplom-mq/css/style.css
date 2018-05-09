@@ -99,6 +99,10 @@ html {
 	justify-content: center;
 }
 
+a:link {
+	text-decoration: none;
+}
+
 .button-download, 
 .button-google {
 	display: flex;
