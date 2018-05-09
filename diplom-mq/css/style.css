@@ -108,10 +108,10 @@ html {
 	text-decoration: none;
 	border: none;
 	border-radius: 5rem;
+	box-shadow: 0 1.6rem 2.4rem rgba(10,14,52);
 	-webkit-box-shadow: 0 1.6rem 2.4rem rgba(10,14,52);
 	-moz-box-shadow: 0 1.6rem 2.4rem rgba(10,14,52);
 	-o-box-shadow: 0 1.6rem 2.4rem rgba(10,14,52);
-	box-shadow: 0 1.6rem 2.4rem rgba(10,14,52);
 }
 
 .button-download:hover, 
