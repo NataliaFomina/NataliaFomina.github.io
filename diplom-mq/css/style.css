@@ -325,7 +325,7 @@ a:link {
 	width: 106px;
 	height: 86px;
 	margin-left: 1rem;
-	margin-top: 2.5rem;
+	margin-top: 2.7rem;
 }
 
 .download-icon {
@@ -939,6 +939,11 @@ a:link {
 		align-self: center;
 	}
 	
+	.download-logo {
+		margin-left: 1.5rem;
+		margin-top: 3.5rem;
+	}
+	
 	.download-title-text-wrap {
 		justify-content: center;
 	}
@@ -1264,6 +1269,13 @@ a:link {
 		height: 74px;
 		border-radius: 3rem;
 		align-self: center;
+	}
+	
+	.download-logo {
+		width: 58px;
+		height: 50px;
+		margin-left: 1rem;
+		margin-top: 2rem;
 	}
 	
 	.download-title-text-wrap {
