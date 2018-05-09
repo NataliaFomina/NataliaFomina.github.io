@@ -1,3 +1,33 @@
+/* --- fonts --- */
+
+@font-face {
+  font-family:'Open Sans';
+  src: url('../fonts/open_sans_bold.eot');
+	src: url('../fonts/open_sans_bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/open_sans_bold.woff2') format('woff2'),
+	url('../fonts/open_sans_bold.woff') format('woff'),
+	url('../fonts/open_sans_bold.svg#open_sans_bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2074;
+}
+
+@font-face {
+  font-family:'Open Sans';
+  src: url('../fonts/open_sans_regular.eot');
+	src: url('../fonts/open_sans_regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/open_sans_regular.woff2') format('woff2'),
+	url('../fonts/open_sans_regular.woff') format('woff'),
+	url('../fonts/open_sans_regular.svg#open_sans_regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
+
+/* --- html --- */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -24,11 +54,27 @@ html {
 
 .header,
 .download {
-	background-size: cover;
 	background-color: #0f0735;
 }
 
-.h1 {
+.header-logo-icon,
+.footer-logo-icon {
+	stroke: #fff;
+}
+.header-logo-text,
+.footer-logo-text {
+	fill: #fff;
+}
+
+.visually-hidden {
+	position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.header-title {
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 9rem;
@@ -37,11 +83,11 @@ html {
 	text-transform: uppercase;
 }
 
-.h1-top {
+.header-title-top {
 	width: 100%;
 }
 	
-.h1-bottom {
+.header-title-bottom {
 	display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -59,6 +105,7 @@ html {
 	align-items: center;
 	background-color: #5e42b0;
 	text-transform: uppercase;
+	text-decoration: none;
 	border: none;
 	border-radius: 5rem;
 	-webkit-box-shadow: 0 1.6rem 2.4rem rgba(10,14,52);
@@ -127,9 +174,12 @@ html {
 	text-transform: uppercase;
 }
 
-.h3 {
+.h3-wrap {
 	position: relative;
 	font-weight: 700;
+}
+
+.h3 {
 	color: #c1c1c1;
 	text-transform: uppercase;
 }
@@ -170,6 +220,9 @@ html {
 
 .players {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
 	overflow: hidden;
 	-webkit-overflow: hidden;
 }
@@ -190,16 +243,13 @@ html {
 	color: #fff;
 }
 
+
 /* -- steps -- */
 
 .steps-be-active,
 .steps-find-contact,
 .steps-work-it {
 	display: flex;
-}
-
-.steps-item {
-	position: relative;
 }
 
 .steps-pic img {
@@ -249,6 +299,16 @@ html {
 	z-index: 200;
 }
 
+.download-title-text-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.download-title {
+	color: #e7e7e7;
+	text-transform: uppercase;
+}
+
 .download-text {
 	text-transform: uppercase;
 	color: #a496ca;
@@ -260,6 +320,11 @@ html {
 	height: 86px;
 	margin-left: 1rem;
 	margin-top: 2.5rem;
+}
+
+.download-icon {
+	stroke: #fff;
+	fill: none;
 }
 
 .footer-logo {
@@ -274,10 +339,13 @@ html {
 @media screen and (min-width: 769px)  {
 	.header {
 		background: url(../images/surface_desktop.jpg) no-repeat center top;
+		background-size: cover;
+		
 	}
 	
 	.download {
 		background: url(../images/download_desktop.jpg) no-repeat center top;
+		background-size: cover;
 	}
 	
 }
@@ -285,10 +353,12 @@ html {
 @media screen and (max-width: 768px)  {
 	.header {
 		background: url(../images/surface_768.jpg) no-repeat center top;
+		background-size: cover;
 	}
 	
 	.download {
 		background: url(../images/download_768.jpg) no-repeat center top;
+		background-size: cover;
 	}
 }
 
@@ -302,6 +372,10 @@ html {
 	
 	/* -- header -- */
 	
+	.header {
+		padding-bottom: 111px;
+	}
+	
 	.header-logo {
 		width: 191px;
 		height: 52px;
@@ -309,19 +383,17 @@ html {
 		margin-right: 35px;
 	}
 	
-	.h1 {
+	.header-title {
 		letter-spacing: 0.49rem;
-/*		margin: 270px 0 201px 0;*/
-		margin: 30vh 0 21vh 0;
+		margin: 31.7vh 0 21vh 0;
 		padding-left: 3%;
 		padding-right: 3%;
-		max-width: 1550px;
+		max-width: 1660px;
 		line-height: 1.15;
 	}
 	
 	.container-buttons {
 		flex-direction: row;
-		padding-bottom: 111px;
 	}
 	
 	.button-download, 
@@ -382,7 +454,7 @@ html {
 	.h3-number {
 		font-size: 1.8rem;
 		top: 8px;
-		left: -34px;
+		left: 0;
 	}
 
 	.h3-number:after {
@@ -474,6 +546,11 @@ html {
 	
 	/* -- steps -- */
 	
+	.steps {
+		max-width: 1920px;
+		margin: auto;
+	}
+	
 	.steps-pic,
 	.steps-item {
 		width: 50%;
@@ -482,6 +559,12 @@ html {
 	
 	.steps .h2 {
 		letter-spacing: 1.7px;
+	}
+	
+	.steps-be-active,
+	.steps-find-contact,
+	.steps-work-it {
+		position: relative;
 	}
 	
 	.steps-be-active .h2,
@@ -520,32 +603,24 @@ html {
 		max-width: 800px;
 	}
 	
+	
 	.steps-be-active-01,
 	.steps-find-contact-02,
 	.steps-work-it-03 {
 		font-size: 2.4rem;
-		height: 8.2vw;
-		width: 8.75vw;
-	}
-	
-	.steps-be-active-01,
-	.steps-work-it-03 {
-		top: calc(50% - 8.2vw);
-		right: calc(50vw - 8.75vw/2);
-	}
-	
-	.steps-find-contact-02 {
-		top: calc(50% - 8.2vw);
-		left: calc(50vw - 8.75vw/2);
+		height: 21%;
+		width: 8.75%;
+		top: calc(50% - 21%);
+		left: calc(50% - 8.75%/2);
 	}
 	
 	.steps-be-active-01:after,
 	.steps-find-contact-02:after,
 	.steps-work-it-03:after {
 		top: calc(58% + 4px);
-		left: calc(57% - 23px);
+		left: calc(57% - 14%);
 		height: 4px;
-		width: 23px;
+		width: 14%;
 		border-radius: 3px;
 	}
 	
@@ -557,7 +632,7 @@ html {
 	
 	.download-container {
 		margin-bottom: 155px;
-		margin-right: 3.9%;
+		margin-right: 2%;
 	}
 	
 	.download-logo-back {
@@ -567,13 +642,23 @@ html {
 		margin-right: 38px;
 	}
 	
+	.download-title-text-wrap {
+		max-width: 790px;
+	}
+	
+	.download-title {
+		font-size: 7.8rem;
+		letter-spacing: 0.5rem;
+		font-weight: 700;
+	}
+	
 	.download-text {
 		font-size: 3rem;
 		line-height: 0.8;
 	}
 	
 	.footer-logo {
-		margin-top: 151px;
+		margin-top: 266px;
 		margin-bottom: 50px;
 	}
 	
@@ -589,13 +674,18 @@ html {
 	}
 	
 	/* -- header -- */
+	
+	.header {
+		padding-bottom: 92px;
+	}
+	
 	.header-logo {
 		width: 200px;
 		height: 60px;
 		margin-top: 38px;
 	}
 	
-	.h1 {
+	.header-title {
 		letter-spacing: 0.59rem;
 		margin: 159px 10% 295px 10%;
 		max-width: 650px;
@@ -604,7 +694,6 @@ html {
 	
 	.container-buttons {
 		flex-direction: row;
-		padding-bottom: 92px;
 	}
 	
 	.button-download, 
@@ -664,8 +753,8 @@ html {
 	
 	.h3-number {
 		font-size: 2.3rem;
-		top: 4px;
-		left: -37px;
+		top: 2px;
+		left: 0;
 	}
 
 	.h3-number:after {
@@ -764,6 +853,10 @@ html {
 		flex-wrap: wrap;
 	}
 	
+	.steps-item {
+		position: relative;
+	}
+	
 	.steps-pic,
 	.steps-item {
 		width: 100%;
@@ -839,6 +932,16 @@ html {
 		align-self: center;
 	}
 	
+	.download-title-text-wrap {
+		justify-content: center;
+	}
+	
+	.download-title {
+		font-size: 11rem;
+		font-weight: 700;
+		letter-spacing: 5px;
+	}
+	
 	.download-title {
 		margin-top: 55px;
 		text-align: center;
@@ -867,6 +970,11 @@ html {
 	}
 	
 	/* -- header -- */
+	
+	.header {
+		padding-bottom: 85px;
+	}
+	
 	.header-logo {
 		width: 133px;
 		height: 36px;
@@ -874,7 +982,7 @@ html {
 		margin-right: 12px;
 	}
 	
-	.h1 {
+	.header-title {
 		letter-spacing: 0.28rem;
 		margin: 126px 5% 77px 5%;
 		max-width: 280px;
@@ -883,7 +991,6 @@ html {
 	
 	.container-buttons {
 		flex-direction: column;
-		padding-bottom: 85px;
 	}
 	
 	.button-download, 
@@ -913,7 +1020,6 @@ html {
 		margin-left: 80px;
 	}
 	
-	
 	.button-download-text,
 	.button-google-text {
 		font-size: 2.6rem;
@@ -924,6 +1030,7 @@ html {
 	.button-download-text {
 		max-width: 100px;
 	}
+	
 	.button-google-text {
 		max-width: 70px;
 	}
@@ -947,6 +1054,7 @@ html {
 		font-size: 16rem;
 		letter-spacing: 2.3px;
 	}
+	
 	.athlets .h2 {
 		padding-left: 6vw;
 	}
@@ -960,8 +1068,9 @@ html {
 	.h3-number {
 		font-size: 4.5rem;
 		top: 7px;
-		left: -22px;
+		left: 0;
 	}
+	
 	.h3-number:after {
 		top: 20px;
 		left: 0;
@@ -1061,6 +1170,9 @@ html {
 		flex-wrap: wrap;
 	}
 	
+	.steps-item {
+		position: relative;
+	}
 	.steps-pic,
 	.steps-item {
 		width: 100%;
@@ -1137,9 +1249,6 @@ html {
 	
 	.download-container {
 		flex-direction: column;
-	}
-	
-	.download-container {
 		margin-bottom: 73px;
 	}
 	
@@ -1150,18 +1259,16 @@ html {
 		align-self: center;
 	}
 	
-	.download-logo {
-		width: 58px;
-		height: 50px;
+	.download-title-text-wrap {
+		justify-content: center;
 	}
 	
 	.download-title {
+		font-size: 10.2rem;
+		font-weight: 700;
+		letter-spacing: 2.3px;
 		margin-top: 48px;
 		text-align: center;
-	}
-	
-	.download .h2 {
-		font-size: 10.2rem;
 	}
 	
 	.download-text {
@@ -1177,9 +1284,178 @@ html {
 	}
 	
 	.download .container-buttons {
-		padding-bottom: 56px;
+		margin-bottom: 56px;
 	}
 
+}
+
+
+/*! normalize.css v8.0.0 | MIT License */
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 
