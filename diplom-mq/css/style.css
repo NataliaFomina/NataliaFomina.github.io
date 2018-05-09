@@ -57,6 +57,11 @@ html {
 	background-color: #0f0735;
 }
 
+.header-logo-container,
+.footer-logo-container {
+	fill: none;
+}
+
 .header-logo-icon,
 .footer-logo-icon {
 	stroke: #fff;
@@ -81,6 +86,7 @@ html {
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
+	cursor: default;
 }
 
 .header-title-top {
@@ -169,6 +175,7 @@ a:link {
 	margin: auto;
 	overflow: hidden;
 	-webkit-overflow: hidden;
+	cursor: default;
 }
 
 .athlets-pic {
@@ -231,6 +238,7 @@ a:link {
 	margin: auto;
 	overflow: hidden;
 	-webkit-overflow: hidden;
+	cursor: default;
 }
 
 .players-pic {
@@ -251,6 +259,10 @@ a:link {
 
 
 /* -- steps -- */
+
+.steps {
+	cursor: default;
+}
 
 .steps-be-active,
 .steps-find-contact,
@@ -294,6 +306,7 @@ a:link {
 .download-container {
 	display: flex;
 	justify-content: center;
+	cursor: default;
 }
 
 .download-logo-back {
