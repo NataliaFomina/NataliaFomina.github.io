@@ -437,6 +437,7 @@ html {
 	.athlets-pic {
 		top: 0;
 		right: 51.8%;
+		max-width: 35%;
 	}
 
 	.h2 {
